@@ -1,0 +1,25 @@
+Perl tutorials
+https://www.perltutorial.org/
+
+Perl docs
+https://perldoc.perl.org/
+
+Perl style guide
+https://perldoc.perl.org/perlstyle
+
+
+
+Perl for begginers
+https://www.perl.org/books/beginning-perl/
+
+Modern perl
+https://www.modernperlbooks.com/books/modern_perl_2016/index.html
+
+
+
+There's More Than One Way Wo Do It
+(о том какие крутости есть в пёрле)
+https://habr.com/ru/articles/155461/
+
+Что должен знать начинающий Perl разработчик о перловой инфраструктуре
+https://habr.com/ru/articles/154613/
