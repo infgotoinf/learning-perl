@@ -1,8 +1,13 @@
 #!/usr/bin/env perl
 
 # It's a good practice to use those to avoid possible errors early
-use strict;
-use warnings;
+# use strict;
+# use warnings;
+# https://perldoc.perl.org/perlstyle
+# But they are enabled automaticaly if you sfecify v5.36 or newer
+use v5.36;
+
+
 
 # Scalars
 # https://stackoverflow.com/questions/67292717/what-does-scalar-mean-in-perl
@@ -11,9 +16,9 @@ use warnings;
 my $a = 1;         # Scalars (singele valued variables)
 my @b = (1, 2, 3); # Arrays (arrays of scalars)
 my %c = (          # Hashes (associative arrays of scalars (just like maps))
-  first => 1,
-  second => 2,
-  third => 3,
+    first => 1,
+    second => 2,
+    third => 3,
 );
 
 # Special symbols ($, @, %) represent what we want to get,
