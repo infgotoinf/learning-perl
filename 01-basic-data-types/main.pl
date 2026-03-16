@@ -26,9 +26,28 @@ my %c = (          # Hashes (associative arrays of scalars (just like maps))
 
 # Special symbols ($, @, %) represent what we want to get,
 # not with that we operate
-print $a ." - Single variable is scalar\n";
-print $b[0] ." - Array [0] element is also scalar\n";
+print $a          ." - Single variable is scalar\n";
+print $b[0]       ." - Array [0] element is also scalar\n";
 print $c{'first'} ." - Hash {'first'} element is also scalar\n\n";
+
+
+
+# Numbers
+# https://www.perltutorial.org/perl-numbers/
+my $n = 123_456_789; # You can add _ in numbers so they're easier to read
+print $n, "\n";
+
+# Integers
+print 124, "\n";
+print -34, "\n";
+print 0b1100, "\n"; # Binary
+print 0255, "\n";   # Octal
+print 0xABC, "\n";  # Hexidecimal
+
+# Floats
+print 228.69, "\n";
+print +1.023e2,"\n";
+print -1.023E2,"\n\n";
 
 
 
