@@ -7,6 +7,9 @@
 # But they are enabled automaticaly if you sfecify v5.36 or newer
 use v5.36;
 
+# 'my' keywoard means this variable is local
+my $var;
+
 
 
 # Scalars
@@ -23,6 +26,48 @@ my %c = (          # Hashes (associative arrays of scalars (just like maps))
 
 # Special symbols ($, @, %) represent what we want to get,
 # not with that we operate
-print "$a - Single variable is scalar\n";
-print "$b[0] - Array [0] element is also scalar\n";
-print "$c{'first'} - Hash {'first'} element is also scalar\n";
+print $a ." - Single variable is scalar\n";
+print $b[0] ." - Array [0] element is also scalar\n";
+print $c{'first'} ." - Hash {'first'} element is also scalar\n\n";
+
+
+
+# Strings
+# https://www.perltutorial.org/perl-string/
+
+# Can be single and double-quoted
+my $s1 = "string";
+my $s2 = 'also string';
+
+# q// and qq// act like single and double-quoted strings
+my $s3 = q/string "string" string/;
+my $s4 = qq/string 'string' string/;
+print $s3, "\n";
+print $s4, "\n";
+
+# but / can be replaced with any other special symbol
+my $s5 = q^string STRING string^;
+
+# String funtions
+print length($s5), "\n"; # Returns number of characters in a string
+print uc($s5), "\n";     # Returns in uper case
+print lc($s5), "\n";     # Returns in lower case
+
+# Extracts substring from a string
+print substr($s5, 7, 6), "\n";
+print substr($s5, -6), "\n";
+substr($s5, 7, 6, "StRinG"); # Replaces substring
+
+# Returns position of the first occurence of the substring in the searched string
+print index($s5, "ing"), "\n";
+# Just like index but searches from end
+print rindex($s5, "ing"), "\n";
+
+# Other functions include
+# chr     - Return ASCII or UNICODE character of a number
+# crypt   - Encrypts passwords in one way fashion
+# hex     - Converts a hexadecimal string to the corresponding value
+# oct     - Converts a string to an octal number
+# ord     - Returns the numeric value of the first character of a string
+# reverse - Reverses a string
+# sprintf - Formats string to be used with print()
