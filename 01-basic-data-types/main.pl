@@ -66,6 +66,25 @@ print "10 <=> 20 = ", 10 <=> 20, "\n";
 print "10 <=> 10 = ", 10 <=> 10, "\n";
 print "10 <=> 5  = ", 10 <=> 5, "\n";
 
+# String operators
+print "lol" eq "xd"  ," - eq  (equal)\n";
+print "lol" ne "xd"  ," - ne  (not equal)\n";
+print "lol" cmp "xd" ," - cmp (comparison)\n";
+print "lol" lt "xd"  ," - lt  (lesser than)\n";
+print "lol" gt "xd"  ," - gt  (greater than)\n";
+print "lol" le "xd"  ," - le  (lesser than or equal)\n";
+print "lol" ge "xd"  ," - ge  (greater than or equal)\n";
+
+print "ye" . "s " . "of" . " course\n"; # . to concate strings
+print "hello " x 4, "\n"; # x NUM to repeat string that many times in perl
+my $inp;
+# chomp() removes last char in a string and returns a number of characters that were removed
+# Usefull to deal with userinput to remove "\n" 
+print chomp($inp = <STDIN>), "\n"; # <STDIN> used to get user input
+print $inp;
+
+# Logical operators: &&, ||, !, and, or, not 
+
 
 
 print "\nStrings\n";
