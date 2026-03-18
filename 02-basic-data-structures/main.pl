@@ -3,7 +3,6 @@
 use v5.36;
 
 
-
 print "Scalars\n";
 # https://stackoverflow.com/questions/67292717/what-does-scalar-mean-in-perl
 
@@ -45,3 +44,56 @@ print ((2,3,4),5,6); print ("\n");
 print ((1, 2, 3, 4, 5, 6)[0, 3, 4], "\n"); # Access 0, 3, 4 elements of a list
 print ((1..10), "\n");    # List from 1 to 10
 print (("a".."z"), "\n"); # List from a to z
+
+
+
+print "\nArray\n";
+# https://www.perltutorial.org/perl-array/
+# Array is a mutable list or, in other words, list in a variable
+my @arr = qw(UwU OwO QwQ TwT :3);
+print @arr[-2..-1], "\n"; # Last two elements
+print $#arr, "\n";        # Operator $# returns last index of an array 
+
+$arr[0] = "XD";
+@arr[1..4] = qw(o.O :3c >_< :P :D);
+@arr[10] = "EEE";
+@arr[7] = "OOO";
+print @arr, "\n";
+
+# Array operations
+my @stack;
+push(@stack, 10); # Add back
+unshift(@stack, 12); # Add front
+my @elem = pop(@stack); # Pop back
+print @elem, "\n";
+@elem = pop(@stack);
+print @elem, "\n";
+
+my @days = qw(Mon Tue Wed Thu Fri Sat Sun);
+print sort(@days), "\n";
+# Sort also accepts a block of code that allows to change the sort algorithm
+# print sort {$days gt "Thu"} @days, "\n";
+
+
+
+print "\nHash\n";
+# https://www.perltutorial.org/perl-hash/
+my %hash = (
+    first => 'cool',
+    second => 'guy',
+    third => 'yay',
+);
+# You can also write hash like that
+my %hash2 = qw(
+    first cool
+    second guy
+    third yay
+);
+# You must use {} to access elements of a hash
+print $hash2{'first'}, "\n";
+
+# keys() allows you to get a list of keys in scalars
+for (keys %hash2) {
+    # $_ - means "default variable"
+    print "Elements $_ is $hash2{$_}", "\n";
+}
