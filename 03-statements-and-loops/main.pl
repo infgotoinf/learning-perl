@@ -1,93 +1,93 @@
 #!/usr/bin/env perl
 
 use v5.42;
+use utf8;
 
 
-print "if statements\n";
+say "if statements";
 # https://www.perltutorial.org/perl-if/
 # You can write if statements just like that
-print "1 is true\n" if(1 == true);
+say "1 is true if(1 == true)";
 
 # Unless works like if, but reversed
 # All those == false
 unless (0) {
-    print "0 is false", "\n";
+    say "0 is false";
 }
 unless ("0") {
-    print '"0" is false', "\n";
+    say '"0" is false';
 }
 unless (my $a) {
-    print "undefined is false", "\n";
+    say "undefined is false";
 }
 unless (()) {
-    print "() is false", "\n";
+    say "() is false";
 }
 unless ("") {
-    print '"" is false', "\n";
+    say '"" is false';
 }
 # All different ones will be == true
 
-if (true) { print "if must be always followed by {}", "\n"};
+if (true) { say "if must be always followed by {}"};
 
 my $num = 5;
 # if elsif else
 if ($num <  5) {
-    print "< 5", "\n";
+    say "< 5";
 } elsif ($num > 5) {
-    print "> 5", "\n";
+    say "> 5";
 } else {
-    print "== 5", "\n";
+    say "== 5";
 }
 
 
-print "\nGiven\n";
+say "\nGiven";
 # https://www.perltutorial.org/perl-given/
 my $color = "BLUE";
 # Given works like switch
 # given($color){
-#     when("RED") { print "#FF0000", "\n"; };
+#     when("RED") { say "#FF0000"; };
 
 #     default {
-#         print "I don't know this color";
+#         say "I don't know this color";
 #     }
 # }
-print "it were removed in newer versions of perl", "\n";
+say "it were removed in newer versions of perl";
 
 
-print "\nFor and foreach\n";
+say "\nFor and foreach";
 # https://www.perltutorial.org/perl-for-loop/
 # $_ - default var
 for (1..20) {
     print "$_ ";
-} print "\n";
+}print("\n");
 
 # You also can specify an explicit iterator
 for my $i (1..20) {
     print "$i ";
-} print "\n";
+}print("\n");
 
 # If you declare an iterator before loop it value will be restored
 my $a = 10;
 for $a (1..20) {
     print "$a ";
-} print "\n";
-print '$a value is ', $a, "\n";
+}print("\n");
+say '$a value is ', $a;
 
 # If you make any changes to the iterator, they will affect it's original values
 my @b = 1..5;
-print @b, "\n";
+say @b;
 for (@b) {
     $_ = $_ * 2;
-}
-print @b, "\n";
+}say @b;
 
 # You can also do C-style arrays
 for (my $i = 1; $i <= 20; ++$i) {
     print "$i ";
-} print "\n";
+}print("\n");
 
 
-print "\nWhile\n";
+say "\nWhile";
 # https://www.perltutorial.org/perl-while/
 my $counter = 10;
 while ($counter > 0) {
@@ -95,9 +95,10 @@ while ($counter > 0) {
 }
 # continue block is executed after each iteration (used rarely)
 continue {
-    print $counter % 2 == 1 ? " Tick" : " Tack", "\n";
+    say $counter % 2 == 1 ? " Tick" : " Tack";
     sleep(1);
-} print "*BOOM!*\n";
+}
+say "*BOOM!*";
 
 # <> allows to get user input from command line
 print "Please enter your credit card information per each line (ctrl-d) to exit:\n>";
@@ -107,11 +108,11 @@ while (my $input = <>) {
     chomp $input;
     push(@credit_card_info, $input);
 }
-print "So it's @credit_card_info? - Thanks", "\n";
+say "So it's @credit_card_info? - Thanks";
 
 # You also can write while loops like that
 print $counter while (++$counter <= 10);
-print "\n";
+print("\n");
 
 # There is also do while
 # There is also 'next' that works the same as 'continue' keyword, but to make use of it with do
@@ -121,6 +122,7 @@ do {{
     next if $counter % 2 == 0;
     print $counter;
 }} while ($counter != 0);
+print "\n";
 
 # There is also until and do until
 # There is also 'last' keyword what is the same as 'break'. Also must be in a block for do statements.
@@ -129,6 +131,7 @@ do {{
 OUTER: until ($counter == 10) {
     foreach (@credit_card_info) {
         last OUTER if $counter == 5;
-        print ++$counter, "\n";
+        print ++$counter;
     }
 }
+print "\n";
