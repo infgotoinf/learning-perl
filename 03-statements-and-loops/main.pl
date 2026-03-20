@@ -3,7 +3,8 @@
 use v5.42;
 
 
-print "is statements\n";
+print "if statements\n";
+# https://www.perltutorial.org/perl-if/
 # You can write if statements just like that
 print "1 is true\n" if(1 == true);
 
@@ -40,6 +41,7 @@ if ($num <  5) {
 
 
 print "\nGiven\n";
+# https://www.perltutorial.org/perl-given/
 my $color = "BLUE";
 # Given works like switch
 # given($color){
@@ -53,6 +55,7 @@ print "it were removed in newer versions of perl", "\n";
 
 
 print "\nFor and foreach\n";
+# https://www.perltutorial.org/perl-for-loop/
 # $_ - default var
 for (1..20) {
     print "$_ ";
@@ -85,6 +88,7 @@ for (my $i = 1; $i <= 20; ++$i) {
 
 
 print "\nWhile\n";
+# https://www.perltutorial.org/perl-while/
 my $counter = 10;
 while ($counter > 0) {
    print $counter--;
@@ -121,6 +125,7 @@ do {{
 # There is also until and do until
 # There is also 'last' keyword what is the same as 'break'. Also must be in a block for do statements.
 # You can specify which statement you want to leave with a label
+# https://www.perltutorial.org/perl-last/
 OUTER: until ($counter == 10) {
     foreach (@credit_card_info) {
         last OUTER if $counter == 5;

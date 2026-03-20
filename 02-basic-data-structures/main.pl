@@ -52,7 +52,7 @@ print "\nArray\n";
 # Array is a mutable list or, in other words, list in a variable
 my @arr = qw(UwU OwO QwQ TwT :3);
 print @arr[-2..-1], "\n"; # Last two elements
-print $#arr, "\n";        # Operator $# returns last index of an array 
+print $#arr, "\n";        # Operator $# returns last index of an array
 
 $arr[0] = "XD";
 @arr[1..4] = qw(o.O :3c >_< :P :D);
