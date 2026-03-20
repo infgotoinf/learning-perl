@@ -82,3 +82,47 @@ print @b, "\n";
 for (my $i = 1; $i <= 20; ++$i) {
     print "$i ";
 } print "\n";
+
+
+print "\nWhile\n";
+my $counter = 10;
+while ($counter > 0) {
+   print $counter--;
+}
+# continue block is executed after each iteration (used rarely)
+continue {
+    print $counter % 2 == 1 ? " Tick" : " Tack", "\n";
+    sleep(1);
+} print "*BOOM!*\n";
+
+# <> allows to get user input from command line
+print "Please enter your credit card information per each line (ctrl-d) to exit:\n>";
+my @credit_card_info;
+while (my $input = <>) {
+    print(">");
+    chomp $input;
+    push(@credit_card_info, $input);
+}
+print "So it's @credit_card_info? - Thanks", "\n";
+
+# You also can write while loops like that
+print $counter while (++$counter <= 10);
+print "\n";
+
+# There is also do while
+# There is also 'next' that works the same as 'continue' keyword, but to make use of it
+# you must put it in a block and you can do this by just adding second braces {{}}
+do {{
+    --$counter;
+    next if $counter % 2 == 0;
+    print $counter;
+}} while ($counter != 0);
+
+# There is also until and do until
+# There is also 'last' keyword what is the same as 'break'. Also must be in a block
+until ($counter == 10) {
+    if ($counter == 5) {
+        last;
+    }
+    print ++$counter, "\n";
+}
