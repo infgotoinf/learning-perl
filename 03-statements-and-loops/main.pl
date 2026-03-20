@@ -110,8 +110,8 @@ print $counter while (++$counter <= 10);
 print "\n";
 
 # There is also do while
-# There is also 'next' that works the same as 'continue' keyword, but to make use of it
-# you must put it in a block and you can do this by just adding second braces {{}}
+# There is also 'next' that works the same as 'continue' keyword, but to make use of it with do
+# statement, you must put it in a block and you can do this by just adding second braces {{}}
 do {{
     --$counter;
     next if $counter % 2 == 0;
@@ -119,10 +119,11 @@ do {{
 }} while ($counter != 0);
 
 # There is also until and do until
-# There is also 'last' keyword what is the same as 'break'. Also must be in a block
-until ($counter == 10) {
-    if ($counter == 5) {
-        last;
+# There is also 'last' keyword what is the same as 'break'. Also must be in a block for do statements.
+# You can specify which statement you want to leave with a label
+OUTER: until ($counter == 10) {
+    foreach (@credit_card_info) {
+        last OUTER if $counter == 5;
+        print ++$counter, "\n";
     }
-    print ++$counter, "\n";
 }
