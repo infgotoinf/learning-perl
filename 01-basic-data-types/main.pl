@@ -29,8 +29,8 @@ say "0xABC  = ", 0xABC, "\n-"; # Hexidecimal
 
 # Floats
 say 228.69;
-say "+13e-2 = ", +1.023e2;
-say "-13E-2 = ", -1.023E2;
+say "13e2 = ", 1.023e2;
+say "13e-2 = ", 1.023e-2;
 
 
 
