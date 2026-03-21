@@ -57,6 +57,9 @@ oct("0b$bits");
 # With utf8 enabled you can use unicode names for variables
 my $лютый_чел = "ыыы ёёё";
 say $лютый_чел;
+# This doesn't work :(
+# my $😎 = "EEEEEE😎😎😎";
+# say $😎;
 
 # Any regular operator can be used as an assignment one
 my $num = 10;
