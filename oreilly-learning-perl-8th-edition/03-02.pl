@@ -16,5 +16,5 @@ my @person_list = qw(
 
 chomp(my @input_numbers = <STDIN>);
 foreach (@input_numbers) {
-    say $person_list[($_ - 1)];
+    say $person_list[$_ - 1];
 }

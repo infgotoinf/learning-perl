@@ -36,7 +36,7 @@ splice(@arr, 1, 0, 69); # splice() can be used to insert elements
 say @arr;
 say "@arr"; # Interpolation on list automatically adds spaces
 say $arr[1];
-say $arr[1-0]; # Takes first number as an index
+say $arr[1+2]; # Takes first number as an index
 
 say reverse @arr;
 my @sorted = sort 95..104;
