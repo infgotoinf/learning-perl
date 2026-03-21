@@ -15,3 +15,23 @@ unless ( defined(my $a) ) {
     say "a is undefined";
 }
 my $undef = undef; # There is also undef operator
+
+# You can define iterator in foreach()
+foreach my $num (1..5) {
+    print $num;
+}
+print "\n";
+
+# You actually can write ... as a placeholder
+# foreach (1..10) {
+#     ...
+# }
+# By default many commands use $_ default variable
+foreach (1..5) { print };
+print "\n";
+
+# each operator can be used with arrays and hashes
+my @letter = "a".."g";
+while( (my $i, my $val) = each @letter ) {
+    say "$i: $val";
+}
