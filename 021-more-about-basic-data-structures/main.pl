@@ -41,3 +41,8 @@ say $arr[1+2]; # Takes first number as an index
 say reverse @arr;
 my @sorted = sort 95..104;
 say "@sorted";
+
+@arr = 1..3;
+$arr[32] = 12;
+# List to scalar returns list size and $# - last element's index
+say scalar @arr, " ", $#arr;
