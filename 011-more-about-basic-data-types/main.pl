@@ -6,6 +6,7 @@
 
 use v5.42;
 use utf8;
+binmode STDOUT, "utf8"; # So you can print utf8 without warnings
 # Acts like more detailed warnings.
 # Can also be used as `perl -Mdiagnostics main.pl`
 use diagnostics;
@@ -80,3 +81,6 @@ my $omega = chr( 0x03C9 );
 say "$alef $alpha $omega";
 # And convert unicode characters to their codepoints
 say ord($alef), ord($alpha), ord($omega);
+
+chomp(my $text = <STDIN>);
+say $text;
