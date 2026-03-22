@@ -76,3 +76,12 @@ sub sum :prototype($$) { $_[0] + $_[1] };
 # & can be omitted if there is no builtin function with such name
 # () can also be omitted
 say sum 2, 3;
+
+sub test {
+    # If we input list $_ becomes uninitialised
+    say '$_ is ', $_;
+    say '@_ is ', @_;
+}
+
+chomp(my @lol = <STDIN>);
+&test(@lol);
