@@ -8,6 +8,10 @@ let
 
   perl_modules = with pkgs.perl5Packages; [
     Gtk3
+    TermAnimation
+    TermProgressBar
+    TermUI
+    CursesUI
   ];
 
 in
