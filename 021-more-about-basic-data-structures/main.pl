@@ -46,3 +46,24 @@ say "@sorted";
 $arr[32] = 12;
 # List to scalar returns list size and $# - last element's index
 say scalar @arr, " ", $#arr;
+
+
+my %hash = qw(
+    lol yes
+    no no
+    heh meh
+);
+foreach my $key (sort keys %hash) {
+    print $key, " ";
+}
+print "\n";
+
+# Check if element with key exists
+if (exists $hash{lol}) {
+    say "lol exists";
+}
+
+# Delete an element with such key
+delete $hash{no};
+
+say "PATH is $ENV{PATH}";
