@@ -8,6 +8,9 @@ Perl style guide
 https://perldoc.perl.org/perlstyle
 
 
+Perl Tutorial
+https://perlmaven.com/perl-tutorial
+
 
 There's More Than One Way Wo Do It
 (о том какие крутости есть в пёрле)
