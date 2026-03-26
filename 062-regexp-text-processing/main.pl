@@ -115,3 +115,22 @@ print "$string\n";
 # it knows there to insert newlines
 
 # //m makes multiline so ^ $ apply to each line
+
+# $^I variable means backup file extension, so if we edit file we save backup file
+chomp(my $date = `date`);
+$^I = ".bak";
+while (<>) {
+  s/\AAuthor:.*/Author: Randal L. Schwartz/;
+  s/\APhone:.*\n//;
+  s/\ADate:.*/Date: $date/;
+  print;
+}
+
+# You can make all the same from the command line:
+# -p makes perl write something like this:
+#  while (<>) { print; }
+# -i.bak is like
+# $^I = ".bak"
+# -w to enable warnings
+# -e to make next string in quotes be treated as perl code
+# perl -p -i.bak -w -e 's/Randall/Randal/g' fred*.dat
