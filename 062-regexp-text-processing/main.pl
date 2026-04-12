@@ -40,7 +40,7 @@ say $original;
 # You can also use /r flag that makes so s/// returns modifyed copy of the string,
 # not the number of substitutions made
 $copy = $original =~ s/\d+ ribs?/10 ribs/r;
-say $original;
+say $copy;
 # The difference here from the previous one is that we first do the substitution
 # and then the assignment
 

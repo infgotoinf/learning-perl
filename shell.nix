@@ -14,6 +14,7 @@ let
     CursesUI
     PathClass
     TimeMoment
+    IOPrompt
   ];
 
 in

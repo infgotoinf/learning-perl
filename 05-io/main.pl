@@ -6,8 +6,8 @@
 
 use v5.42;
 use utf8;
-binmode STDOUT, ':encode(UTF-8)';
-binmode STDIN, ':encode(UTF-8)';
+binmode STDOUT, ':encoding(UTF-8)';
+binmode STDIN, ':encoding(UTF-8)';
 
 
 # Those two work the same inwoking block after each line of input
